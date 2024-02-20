@@ -10,21 +10,50 @@
 
     <!-- 피자 주문 요청 -> 영수증 응답 -->
 
-    <h3>핏자 주문을 해보아요</h3>
+    <form action="/ex3" method="GET">
 
-    피자 선택 :
-    <select name="pizza">
-        <option value="치즈">치즈피자 (8000)</option>
-        <option value="페퍼로니">페퍼로니피자 (9000)</option>
-        <option value="고구마">고구마피자 (9000)</option>
-        <option value="바비큐">바비큐피자 (10000)</option>
-    </select>
+        <h3>핏자 주문을 해보아요</h3>
 
-    <br>
+        피자 선택 :
+        <select name="pizza">
+            <option value="치즈">치즈피자 (8000)</option>
+            <option value="페퍼로니">페퍼로니피자 (9000)</option>
+            <option value="고구마">고구마피자 (9000)</option>
+            <option value="바비큐">바비큐피자 (10000)</option>
+        </select>
 
-    
+        <br><br>
+
+        피자 손잡이 :
+        <select name="handle">
+            <option value="nothing">그냥 빵(+0)</option>
+            <option value="sweetpotato">고구마(+3000)</option>
+            <option value="cheese">치즈(+2000)</option>
+        </select>
+
+        <br><br>
+
+        기타 옵션 : <br>
+
+        <label><input type="checkbox" name="opt" value="피클">피클 (+500)</label> <br>
+        <label><input type="checkbox" name="opt" value="핫소스">핫소스 (+300)</label> <br>
+        <label><input type="checkbox" name="opt" value="치즈가루">치즈가루 (+300)</label> <br>
+        <label><input type="checkbox" name="opt" value="갈릭소스">갈릭소스 (+800)</label> <br>
+       
+        <br>
+
+        주문자명 : <input type="text" name="ordererName"> <br><br>
+
+        주소 : <input type="text" name="ordererAddress"> <br><br>
+
+        <button onclick="alert('탁월한 선택이십니다요 !! 금방 만들어드리겠나이다')">주문하기💨</button>
+        
+
+    </form>
 
 
-
+    <script>
+        
+    </script>
 </body>
 </html>
