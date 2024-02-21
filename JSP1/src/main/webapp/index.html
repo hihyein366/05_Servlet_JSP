@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSP1</title>
+</head>
+<body>
+    <!-- index.html == 메인페이지 -->
+
+    <h1>회원 가입</h1>
+    <form action="/signup" method="POST">
+        <table>
+            <tr>
+                <td>아이디 : </td>
+                <td><input type="text" name="inputId"></td>
+            </tr>
+            <tr>
+                <td>비밀번호 : </td>
+                <td><input type="password" name="inputPw"></td>
+            </tr>
+            <tr>
+                <td>비밀번호 확인 : </td>
+                <td><input type="password" name="inputPwCheck"></td>
+            </tr>
+            <tr>
+                <td>이름 : </td>
+                <td><input type="text" name="inputName"></td>
+            </tr>
+            <tr>
+                <td>나이 : </td>
+                <td><input type="number" name="inputAge"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button>회원 가입</button></td>
+            </tr>
+        </table>
+    </form>
+    
+    <hr>
+
+    <h1>Servlet/JSP를 이용한 페이지 이동</h1>
+    <pre>
+    - form, a, JS(location.href), 주소창에 직접 작성
+
+    - 파일 경로를 작성해서 이동 (x)
+
+    - 서버 요청 주소를 작성하여 이동 (o)
+      (요청하고자 하는 Servlet에 매핑된 주소를 이용해야함)
+      (@WebServlet("주소"))
+    </pre>
+
+    <!-- 외부에 노출되면 안되는 코드(Java, JSP)는 /WEB-INF 폴더에 저장 -->
+    <a href="/WEB-INF/views/pizza_order.jsp">
+        이거 안돼애~~!!(/WEB-INF 폴더는 주소로 접근 불가!)
+    </a>
+
+    <!-- @WebServlet("/pizza/order")를 가진 Servlet 요청 
+         -> Java, XML 등 프로젝트 내부에서는 파일 경로로 접근 가능!!
+    -->
+    <br><br>
+    <a href="/pizza/order">피자 주문 페이지 이동</a>
+
+
+</body>
+</html>

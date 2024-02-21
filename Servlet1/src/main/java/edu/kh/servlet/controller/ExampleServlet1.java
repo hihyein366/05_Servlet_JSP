@@ -86,7 +86,7 @@ public class ExampleServlet1 extends HttpServlet {
 		sb.append("</html>");
 		
 		// sb에 누적된 html 코드를 스트림을 이용해서 출력
-		out.print(sb.toString());
+		out.print(sb.toString()); 
 
 		
 		
